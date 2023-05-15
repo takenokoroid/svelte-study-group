@@ -1,0 +1,20 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"onCreateCommand": "chmod +x .devcontainer/onCreateCommand.sh && ./.devcontainer/onCreateCommand.sh ${containerWorkspaceFolder}",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph",
+				"MS-CEINTL.vscode-language-pack-ja",
+				"GitHub.copilot",
+				"esbenp.prettier-vscode"
+			]
+		}
+	}
+}

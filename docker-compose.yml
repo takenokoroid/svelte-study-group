@@ -1,0 +1,16 @@
+version: '3'
+
+volumes:
+  study-group-node-modules:
+
+services:
+  app:
+    image: node:18-bullseye-slim
+    container_name: study-group-frontend
+    working_dir: /app
+    tty: true
+    volumes:
+      - ./:/app
+      - study-group-node-modules:/app/node_modules
+    ports:
+      - 5173:5173
