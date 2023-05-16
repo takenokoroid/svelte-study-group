@@ -1,43 +1,54 @@
 <script>
 	import NavBar from '$lib/components/NavBar.svelte';
-	import SideBar from '$lib/components/SideBar.svelte';
+	import LeftPane from '$lib/components/LeftPane.svelte';
+	import RightPane from '$lib/components/RightPane.svelte';
 </script>
 
 <div class="wrapper">
-	<div class="box1">
+	<div class="navbar-container">
 		<NavBar />
 	</div>
-	<div class="box2">
-		<SideBar />
+	<div class="leftpane-container">
+		<LeftPane />
 	</div>
-	<div class="box3">
+	<div class="slot-container">
 		<slot />
+	</div>
+	<div class="rightpane-container">
+		<RightPane />
 	</div>
 </div>
 
 <style>
 	.wrapper {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		grid-auto-rows: 100px;
 	}
 
-	.box1 {
+	.navbar-container {
 		grid-column-start: 1;
-		grid-column-end: 5;
+		grid-column-end: 6;
 		grid-row-start: 1;
 		grid-row-end: 2;
 	}
 
-	.box2 {
+	.leftpane-container {
 		grid-column-start: 1;
 		grid-row-start: 2;
 		grid-row-end: 3;
 	}
 
-	.box3 {
+	.slot-container {
 		grid-column-start: 2;
 		grid-column-end: 5;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+
+	.rightpane-container {
+		grid-column-start: 5;
+		grid-column-end: 6;
 		grid-row-start: 2;
 		grid-row-end: 3;
 	}

@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div>side</div>
+<div>right pane</div>
 
 <style>
 </style>
