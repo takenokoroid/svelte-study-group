@@ -1,4 +1,12 @@
 <script>
+	import ContactCard from '$lib/components/ContactCard.svelte';
+
+	const data = {
+		icon: 'icon',
+		name: '白瀬咲耶',
+		mailAddress: 'aaa@aaa',
+		phoneNumber: '090'
+	};
 </script>
 
 <div class="flex-container">
@@ -7,14 +15,9 @@
 	<div>電話番号</div>
 </div>
 
-<div>
+<div class="box">
 	<div>連絡先</div>
-	<div class="flex-container">
-		<div>icon</div>
-		<div>竹中露井道</div>
-		<div>takenoko@takenoko.co.tk</div>
-		<div>+819012341234</div>
-	</div>
+	<ContactCard {...data} />
 </div>
 
 <style>
