@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div>right pane</div>
+<div class="m-10">right pane</div>
 
 <style>
 </style>
