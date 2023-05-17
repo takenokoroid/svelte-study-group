@@ -9,7 +9,7 @@
 	export let phoneNumber;
 </script>
 
-<div class="flex-container">
+<div class="contact-card-grid">
 	<div>{icon}</div>
 	<div>{name}</div>
 	<div>{mailAddress}</div>
@@ -17,9 +17,9 @@
 </div>
 
 <style>
-	.flex-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	.contact-card-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: 100px;
 	}
 </style>
